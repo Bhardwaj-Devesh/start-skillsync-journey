@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import SignupCounter from './SignupCounter';
 
 interface HeaderProps {
   onRequestDemo: () => void;
@@ -10,8 +8,8 @@ interface HeaderProps {
 
 const Header = ({ onRequestDemo }: HeaderProps) => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/20 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+      <div className="w-full px-6 md:px-8 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
@@ -23,21 +21,8 @@ const Header = ({ onRequestDemo }: HeaderProps) => {
             </span>
           </div>
 
-          {/* Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-slate-700 hover:text-purple-600 transition-colors font-medium">
-              Features
-            </a>
-            <a href="#testimonials" className="text-slate-700 hover:text-purple-600 transition-colors font-medium">
-              Testimonials
-            </a>
-            <a href="#faq" className="text-slate-700 hover:text-purple-600 transition-colors font-medium">
-              FAQ
-            </a>
-          </nav>
-
-          {/* Request Demo Button and Signup Counter */}
-          <div className="flex items-center space-x-4">
+          {/* Request Demo Button */}
+          <div className="flex items-center">
             <Button
               variant="default"
               size="sm"
@@ -46,9 +31,6 @@ const Header = ({ onRequestDemo }: HeaderProps) => {
             >
               Request Demo
             </Button>
-            <div className="hidden lg:block">
-              <SignupCounter />
-            </div>
           </div>
         </div>
       </div>
