@@ -34,11 +34,9 @@ export default function TeamSection() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-20">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-        Meet Our Leadership
+        Meet Our Team
       </h2>
-      <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        A team of industry veterans and innovators passionate about transforming the future of hiring
-      </p>
+      
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
         {team.map((member) => (
           <Card
@@ -50,7 +48,7 @@ export default function TeamSection() {
               <img
                 src={member.avatar}
                 alt={member.name}
-                className="w-full h-48 object-cover object-center"
+                className="w-full h-61 object-cover object-center"
               />
             </div>
             <CardHeader className="text-center pt-6">

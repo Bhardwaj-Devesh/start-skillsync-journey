@@ -92,59 +92,7 @@ const Index = () => {
         </section>
         <LeadForm open={formOpen} onOpenChange={setFormOpen} />
 
-        {/* Features */}
-        <section className="relative px-4 md:px-6 py-16 md:py-24 bg-gray-50">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-                Why SkillSync?
-              </h2>
-              <ul className="space-y-4">
-                {features.map((feature, i) => (
-                  <li key={feature.title} className="group relative flex items-center gap-4 p-5 rounded-2xl bg-white shadow-md hover:shadow-lg perspective-card transition-all duration-300">
-                    <span className="flex items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 p-2 mr-2 shadow group-hover:scale-110 transition-transform">
-                      <feature.icon className="h-7 w-7 text-white" />
-                    </span>
-                    <div>
-                      <div className="font-semibold text-lg text-gray-900">{feature.title}</div>
-                      <div className="text-gray-600">{feature.description}</div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex items-center justify-center">
-              <div className="relative w-full max-w-xs md:max-w-md aspect-square flex items-center justify-center">
-                {/* Animated blob (soft, gradient, floating visual) */}
-                <div className="absolute inset-0 rounded-full bg-blue-100 blur-3xl opacity-50"></div>
-                <div className="absolute inset-4 rounded-full bg-pink-100 blur-lg opacity-70" style={{
-                  animationDuration: '7s',
-                  animationDelay: '2s'
-                }}></div>
-                <span className="relative text-2xl md:text-3xl font-bold text-gray-800 drop-shadow-lg text-center px-4">AI Matches + Smart Discovery = <br />Effortless Hiring</span>
-              </div>
-            </div>
-          </div>
-          {/* ... keep existing styles for perspective-card and float ... */}
-          <style>
-            {`
-              .perspective-card {
-                transition: transform 0.45s cubic-bezier(.2,1,.2,1);
-                will-change: transform;
-              }
-              .perspective-card:hover {
-                transform: rotateY(4deg) scale(1.035);
-              }
-              @keyframes float {
-                0% { transform: translateY(0);}
-                50% { transform: translateY(-20px);}
-                100% { transform: translateY(0);}
-              }
-              .animate-float { animation: float 6s ease-in-out infinite;}
-            `}
-          </style>
-        </section>
-
+        
         {/* Solution Section */}
         <section className="relative px-4 md:px-6 py-12 md:py-20 bg-white">
           <div className="max-w-4xl mx-auto text-center">
