@@ -202,7 +202,27 @@ const Index = () => {
             </AnimatedSection>
           </div>
         </section>
-
+          
+        {/* Benefits Section */}
+        <section className="relative px-4 md:px-6 py-12 md:py-20">
+          <div className="max-w-4xl mx-auto">
+            <AnimatedSection className="text-center mb-12 md:mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">What You'll Actually Get</h2>
+              <p className="text-lg md:text-xl text-black-200">
+                Measurable results that transform your hiring process
+              </p>
+            </AnimatedSection>
+            
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+              {benefits.map((benefit, index) => <AnimatedSection key={index} animationType="slideRight" delay={index * 100} className="group">
+                  <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors duration-300">
+                    <CheckCircle className="h-5 w-5 md:h-6 md:w-6 text-green-600 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
+                    <span className="text-base md:text-lg text-black-100">{benefit}</span>
+                  </div>
+                </AnimatedSection>)}
+            </div>
+          </div>
+        </section>
         
         {/* Team Section */}
         <TeamSection />
