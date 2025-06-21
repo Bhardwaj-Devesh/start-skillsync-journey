@@ -4,8 +4,8 @@ import WaitlistForm from "./WaitlistForm";
 const STRINGS = [
   "",
   "",
-  "Find Hidden Tech Talent",
-  "Perfect Fit. Every Time."
+  "Hiring of the future",
+  "Powered By AI."
 ];
 
 const colors = [
